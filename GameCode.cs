@@ -40,7 +40,7 @@ namespace ConsoleApp3
             string name = "micopiri";
 
             /// ITEMDAMAGE
-            float StickDMG = 1;
+            float StickDMG = 2;
             float RockDMG = 3;
             float KnifeDMG = 5;
             float SwordDMG = 8;
@@ -105,9 +105,14 @@ namespace ConsoleApp3
                             kills++;
                             Money += moneygain;
 
-                            if (lvl <= 4)
+                            if (lvl <= 1)
                             {
                                 enemyhp = rnd.Next(7,9 + 3);
+                            }
+
+                            else if (lvl > 2)
+                            {
+                                enemyhp = rnd.Next(20, 40 + 3);
                             }
 
                             else if (lvl > 4)
@@ -149,18 +154,23 @@ namespace ConsoleApp3
                         if (hp <= 0)
                         {
                             xp -= 1;
-
-                            if (lvl <= 4)
+                            if (lvl <= 1)
                             {
                                 enemyhp = rnd.Next(7, 9 + 3);
                             }
+
+                            else if (lvl > 2)
+                            {
+                                enemyhp = rnd.Next(20, 40 + 3);
+                            }
+
                             else if (lvl > 4)
                             {
-                                enemyhp = rnd.Next(12, 18 + 3);
+                                enemyhp = rnd.Next(50, 80 + 3);
                             }
                             else if (lvl > 9)
                             {
-                                enemyhp = rnd.Next(18, 28 + 3);
+                                enemyhp = rnd.Next(142, 240 + 3);
                             }
 
                             hp = defaulthp;
