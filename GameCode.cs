@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 
 
-namespace GameCode
+namespace ConsoleApp3
 {
     public class Program
     {
@@ -59,7 +59,7 @@ namespace GameCode
                 float moneygain = lvl * 2;
 
 
-                string enemy = "Monster";
+                string enemy = "Křeček";
 
                 Console.WriteLine("Options : ( 1 ) FIGHT, ( 2 ) SHOP");
                 string option = Console.ReadLine();
@@ -112,11 +112,11 @@ namespace GameCode
 
                             else if (lvl > 4)
                             {
-                                enemyhp = rnd.Next(12, 18 + 3);
+                                enemyhp = rnd.Next(50, 80 + 3);
                             }
                             else if (lvl > 9)
                             {
-                                enemyhp = rnd.Next(18, 28 + 3);
+                                enemyhp = rnd.Next(142, 240 + 3);
                             }
 
                             hp = defaulthp;
