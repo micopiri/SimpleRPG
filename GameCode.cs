@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 
 
-namespace ConsoleApp3
+namespace GameCode
 {
     public class Program
     {
