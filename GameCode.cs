@@ -59,7 +59,7 @@ namespace ConsoleApp3
                 float moneygain = lvl * 2;
 
 
-                string enemy = "Křeček";
+                string enemy = "Monster";
 
                 Console.WriteLine("Options : ( 1 ) FIGHT, ( 2 ) SHOP");
                 string option = Console.ReadLine();
