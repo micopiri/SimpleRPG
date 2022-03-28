@@ -167,7 +167,7 @@ namespace ConsoleApp3
                                     Money -= 10;
                                     dmg += StickDMG;
 
-                                    Console.WriteLine("You bought a stick!, Your money : " + Money);
+                                    Console.WriteLine("You've bought a stick!, Your money : " + Money);
                                 }
                                 break;
 
@@ -177,7 +177,7 @@ namespace ConsoleApp3
                                     Money -= 50;
                                     dmg += RockDMG;
 
-                                    Console.WriteLine("You bought a Rock!, Your money : " + Money);
+                                    Console.WriteLine("You've bought a Rock!, Your money : " + Money);
                                 }
                                 break;
 
@@ -187,7 +187,7 @@ namespace ConsoleApp3
                                     Money -= 275;
                                     dmg += KnifeDMG;
 
-                                    Console.WriteLine("You bought a Knife!, Your money : " + Money);
+                                    Console.WriteLine("You've bought a Knife!, Your money : " + Money);
                                 }
                                 break;
 
@@ -197,7 +197,7 @@ namespace ConsoleApp3
                                     Money -= 325;
                                     dmg += SwordDMG;
 
-                                    Console.WriteLine("You bought a Sword!, Your money : " + Money);
+                                    Console.WriteLine("You've bought a Sword!, Your money : " + Money);
                                 }
                                 break;
 
@@ -207,7 +207,7 @@ namespace ConsoleApp3
                                     Money -= 465;
                                     dmg += GunDMG;
 
-                                    Console.WriteLine("You bought a Gun!, Your money : " + Money);
+                                    Console.WriteLine("You've bought a Gun!, Your money : " + Money);
                                 }
                                 break;
 
