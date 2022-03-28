@@ -9,12 +9,12 @@ namespace ConsoleApp3
 {
     public class Program
     {
-       public static void Main()
+        public static void Main()
         {
-            
+
             Random rnd = new Random();
 
-            float enemyhp = rnd.Next(7,9);
+            float enemyhp = rnd.Next(7, 9);
 
             string made = "made";
 
@@ -29,13 +29,6 @@ namespace ConsoleApp3
             float dmg = 1;
 
             string by = "by";
-
-            /// ITEMS
-            float Stick = 0;
-            float Rock = 0;
-            float Knife = 0;
-            float Sword = 0;
-            float Gun = 0;
 
             string name = "micopiri";
 
@@ -69,36 +62,16 @@ namespace ConsoleApp3
                     case "1":
                         enemyhp -= dmg;
 
-                        if (Stick >= 1)
-                        {
-                            enemyhp -= StickDMG * Stick;
-                        }
-                        else if (Rock >= 1)
-                        {
-                            enemyhp -= RockDMG * Rock;
-                        }
-                        else if (Knife >= 1)
-                        {
-                            enemyhp -= KnifeDMG * Knife;
-                        }
-                        else if (Sword >= 1)
-                        {
-                            enemyhp -= SwordDMG * Sword;
-                        }
-                        else if (Gun >= 1)
-                        {
-                            enemyhp -= GunDMG * Gun;
-                        }
                         hp -= enemydmg;
 
                         Console.WriteLine();
-                        Console.WriteLine("You dealt : " + dmg + " damage!" + " //// You gained : " + enemydmg + " damage from the enemy!");
+                        Console.WriteLine("You've dealt : " + dmg + " damage!" + " //// You've gained : " + enemydmg + " damage from the enemy!");
                         Console.WriteLine("Your HP : " + hp + " //// Enemy HP : " + enemyhp);
 
                         Console.WriteLine();
                         Console.ReadLine();
                         Console.Clear();
-                        
+
 
                         if (enemyhp <= 0)
                         {
@@ -107,19 +80,19 @@ namespace ConsoleApp3
 
                             if (lvl <= 1)
                             {
-                                enemyhp = rnd.Next(7,9 + 3);
+                                enemyhp = rnd.Next(7, 9 + 3);
                             }
 
-                            else if (lvl > 2)
+                            else if (lvl >= 2 & lvl <= 4)
                             {
                                 enemyhp = rnd.Next(20, 40 + 3);
                             }
 
-                            else if (lvl > 4)
+                            else if (lvl >= 5 & lvl <= 9)
                             {
                                 enemyhp = rnd.Next(50, 80 + 3);
                             }
-                            else if (lvl > 9)
+                            else if (lvl > 10)
                             {
                                 enemyhp = rnd.Next(142, 240 + 3);
                             }
@@ -129,56 +102,32 @@ namespace ConsoleApp3
                             float xpgain = rnd.Next(1, 3);
                             xp += xpgain;
 
-                            Console.WriteLine("//////////////YOU WON/////////");
-                            Console.WriteLine("//////YOU WON/////////////////");
-                            Console.WriteLine("//////////////YOU WON/////////");
-                            Console.WriteLine("///////YOU WON////////////////");
+                            Console.WriteLine("//////////////YOU HAVE WON/////////");
+                            Console.WriteLine("//////YOU HAVE WON/////////////////");
+                            Console.WriteLine("//////////////YOU HAVE WON/////////");
+                            Console.WriteLine("///////YOU HAVE WON////////////////");
                             Console.WriteLine();
                             Console.WriteLine();
 
-                            Console.WriteLine("You defeated " + enemy + ", You gained : " + xpgain + " xp!, You gained : " + moneygain + " money!" );
+                            Console.WriteLine("You've defeated " + enemy + ", You've gained : " + xpgain + " xp!, You've gained : " + moneygain + " money!");
                             if (xp >= 10)
                             {
                                 lvl++;
                                 xp = 0;
-                                Console.WriteLine("You leveled up!, Your level : " + lvl);
+                                Console.WriteLine("You've leveled up!, Your level : " + lvl);
                             }
 
                             Console.WriteLine();
                             Console.WriteLine();
-                            Console.WriteLine("//////////////YOU WON/////////");
-                            Console.WriteLine("//////YOU WON/////////////////");
-                            Console.WriteLine("//////////////YOU WON/////////");
-                            Console.WriteLine("///////YOU WON////////////////");
+                            Console.WriteLine("//////////////YOU HAVE WON/////////");
+                            Console.WriteLine("//////YOU HAVE WON/////////////////");
+                            Console.WriteLine("//////////////YOU HAVE WON/////////");
+                            Console.WriteLine("///////YOU HAVE WON////////////////");
                         }
-                        if (hp <= 0)
-                        {
-                            xp -= 1;
-                            if (lvl <= 1)
-                            {
-                                enemyhp = rnd.Next(7, 9 + 3);
-                            }
-
-                            else if (lvl > 2)
-                            {
-                                enemyhp = rnd.Next(20, 40 + 3);
-                            }
-
-                            else if (lvl > 4)
-                            {
-                                enemyhp = rnd.Next(50, 80 + 3);
-                            }
-                            else if (lvl > 9)
-                            {
-                                enemyhp = rnd.Next(142, 240 + 3);
-                            }
-
-                            hp = defaulthp;
-
-                            Console.WriteLine("You died!, you lost : " + 1 + " Xp! :(, Your xp : "+ xp);
-                        }
-                    break;
                         
+
+                        break;
+
 
                     case "2":
                         Console.Clear();
@@ -188,7 +137,7 @@ namespace ConsoleApp3
                         Console.WriteLine();
                         Console.WriteLine("S H O P");
                         Console.WriteLine("________________________________________________");
-                        Console.WriteLine("Your money : " + Money);
+                        Console.WriteLine("Your money : " + Money + "(lvl:" + lvl + ")");
                         Console.WriteLine(); ///
                         Console.WriteLine("Items /// /// /// /// /// /// /// /// /// /// ///");
                         Console.WriteLine(); ///
@@ -216,17 +165,17 @@ namespace ConsoleApp3
                                 if (Money >= 10)
                                 {
                                     Money -= 10;
-                                    Stick++;
+                                    dmg += StickDMG;
 
                                     Console.WriteLine("You bought a stick!, Your money : " + Money);
                                 }
-                            break;
+                                break;
 
                             case "buy Rock":
                                 if (Money >= 50)
                                 {
                                     Money -= 50;
-                                    Rock++;
+                                    dmg += RockDMG;
 
                                     Console.WriteLine("You bought a Rock!, Your money : " + Money);
                                 }
@@ -236,7 +185,7 @@ namespace ConsoleApp3
                                 if (Money >= 275)
                                 {
                                     Money -= 275;
-                                    Knife++;
+                                    dmg += KnifeDMG;
 
                                     Console.WriteLine("You bought a Knife!, Your money : " + Money);
                                 }
@@ -246,7 +195,7 @@ namespace ConsoleApp3
                                 if (Money >= 325)
                                 {
                                     Money -= 325;
-                                    Sword++;
+                                    dmg += SwordDMG;
 
                                     Console.WriteLine("You bought a Sword!, Your money : " + Money);
                                 }
@@ -256,14 +205,14 @@ namespace ConsoleApp3
                                 if (Money >= 465)
                                 {
                                     Money -= 465;
-                                    Gun++;
+                                    dmg += GunDMG;
 
                                     Console.WriteLine("You bought a Gun!, Your money : " + Money);
                                 }
                                 break;
 
                         }
-                        
+
 
 
                         break;
@@ -271,9 +220,9 @@ namespace ConsoleApp3
                     default:
                         Console.WriteLine("Invalid Input");
                         break;
-                }    
-             }
-       }
+                }
+            }
+        }
 
     }
 
